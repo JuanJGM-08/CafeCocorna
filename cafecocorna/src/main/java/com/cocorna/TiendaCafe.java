@@ -21,6 +21,15 @@ public class TiendaCafe {
         System.out.println("\n--- Actualizando Cantidad ---");
         cafe1.actualizarCantidad(40.0f);
 
+        // ========== NUEVO EN RAMA MEJORAS ==========
+        System.out.println("\n--- Aplicando Descuentos ---");
+        System.out.println("Aplicando 15% de descuento al Café Cocorna Antioquia:");
+        cafe2.aplicarDescuento(15);
+
+        System.out.println("\nAplicando 10% de descuento al Café Cocorna Eje Cafetero:");
+        cafe3.aplicarDescuento(10);
+        // ========== FIN NUEVO ==========
+
         System.out.println("\n--- Información Actualizada ---");
         cafe1.mostrarInformacion();
         cafe2.mostrarInformacion();
