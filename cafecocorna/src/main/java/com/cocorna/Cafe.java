@@ -30,6 +30,23 @@ public class Cafe {
         System.out.println("Cantidad actualizada a: " + this.cantidadEnKilos + " kg");
     }
 
+    // ========== MÉTODO NUEVO EN RAMA MEJORAS ==========
+    public void aplicarDescuento(double porcentaje) {
+        if (porcentaje < 0 || porcentaje > 100) {
+            System.out.println("Error: El porcentaje debe estar entre 0 y 100");
+            return;
+        }
+
+        double descuento = this.precioPorKilo * (porcentaje / 100);
+        double nuevoPrecio = this.precioPorKilo - descuento;
+
+        System.out.println("Descuento aplicado: " + porcentaje + "%");
+        System.out.println("Nuevo precio: $" + nuevoPrecio + " COP");
+
+        this.precioPorKilo = nuevoPrecio;
+    }
+    // ========== FIN MÉTODO NUEVO ==========
+
     // Getters y Setters
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
